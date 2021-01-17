@@ -5,10 +5,8 @@ module.exports = {
     '<rootDir>/src/**/*.{ts,tsx}',
     '!<rootDir>/src/main/**/*',
     '!<rootDir>/src/styles/**/*',
-    '!<rootDir>/src/pages/_*.tsx',
-    '!<rootDir>/src/pages/index.tsx',
-    '!<rootDir>/src/pages/settings.tsx',
-    '!<rootDir>/src/presentation/components/router/**/*',
+    '!<rootDir>/src/index.tsx',
+    '!<rootDir>/src/reportWebVitals.ts',
     '!**/*.d.ts'
   ],
   coverageDirectory: 'coverage',
