@@ -1,7 +1,7 @@
 import React from 'react'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 
-import LandingPage from '@/pages/landing-page'
+import LandingPage from '../../pages/landing-page'
 
 type Props = {
   makeDetails: React.FC

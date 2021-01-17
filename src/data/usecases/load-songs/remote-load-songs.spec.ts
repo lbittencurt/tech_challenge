@@ -38,7 +38,9 @@ const makeSut = (url = faker.internet.url()): SutTypes => {
 }
 
 type MockLoadSongsResponse = {
-  songs: SongModel[]
+  body: {
+    songs: SongModel[]
+  }
 }
 
 const fakeSong = {
@@ -65,7 +67,9 @@ const fakeSong = {
 }
 const mockRemoteLoadSongsModel = (): MockLoadSongsResponse => {
   return {
-    songs: [fakeSong]
+    body: {
+      songs: [fakeSong]
+    }
   }
 }
 
@@ -76,7 +80,7 @@ describe('Load Songs', () => {
 
     httpClientSpy.response = {
       statusCode: HttpStatusCode.ok,
-      body: { songs: [] }
+      body: { body: { songs: [] } }
     }
 
     await sut.loadAll()

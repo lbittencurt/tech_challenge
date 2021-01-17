@@ -1,10 +1,10 @@
 import React from 'react'
+import { makeDetailsPage } from './factories/pages/details-page-factory'
+import Router from './routes/router'
 
 const Main: React.FC = () => {
   return (
-    <div>
-      <h1>code challenge</h1>
-    </div>
+    <Router makeDetails={ makeDetailsPage } />
   )
 }
 
