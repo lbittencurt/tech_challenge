@@ -1,4 +1,9 @@
 # Tech challenge
+Concepts used to create this solution:
+- Clean Architecture
+- SOLID
+- TDD
+- DRY
 
 After clone, please install dependencies with:
 ```
