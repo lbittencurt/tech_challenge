@@ -1,7 +1,7 @@
 import { HttpClient, HttpStatusCode } from '@/data/protocols/http/http-client'
 import { AccessDeniedError } from '@/domain/errors/access-denied-error'
 import { UnexpectedError } from '@/domain/errors/unexpected-error'
-import { LoadSongs } from '@/domain/usecases/loadSongs'
+import { LoadSongs, SongModel } from '@/domain/usecases/loadSongs'
 
 export class RemoteLoadSongs implements LoadSongs {
   constructor (
@@ -9,7 +9,7 @@ export class RemoteLoadSongs implements LoadSongs {
     private readonly httpClient: HttpClient<any>
   ) {}
 
-  async loadAll (): Promise<LoadSongs.Model[]> {
+  async loadAll (): Promise<SongModel[]> {
     const httpResponse = await this.httpClient.request({
       url: this.url,
       method: 'get'

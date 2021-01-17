@@ -1,7 +1,7 @@
 import { HttpClient, HttpRequest, HttpResponse, HttpStatusCode } from '@/data/protocols/http/http-client'
 import { AccessDeniedError } from '@/domain/errors/access-denied-error'
 import { UnexpectedError } from '@/domain/errors/unexpected-error'
-import { LoadSongs } from '@/domain/usecases/loadSongs'
+import { SongModel } from '@/domain/usecases/loadSongs'
 import faker from 'faker'
 import { RemoteLoadSongs } from './remote-load-songs'
 
@@ -38,7 +38,7 @@ const makeSut = (url = faker.internet.url()): SutTypes => {
 }
 
 type MockLoadSongsResponse = {
-  songs: LoadSongs.Model[]
+  songs: SongModel[]
 }
 
 const fakeSong = {
